@@ -67,7 +67,7 @@ class Apple (GameObject):
         self.randomize_position()
 
     def draw(self, screen):
-        """Рисует яблоко"""     
+        """Рисует яблоко"""
         rect = pygame.Rect(self.position, (GRID_SIZE, GRID_SIZE))
         pygame.draw.rect(screen, self.body_color, rect)
         pygame.draw.rect(screen, BORDER_COLOR, rect, 1)
@@ -150,7 +150,7 @@ class Snake (GameObject):
         head = self.get_head_position()
         if head in self.positions[1:]:
             self.direction = RIGHT
-            self.positions = [((SCREEN_WIDTH // 2 // GRID_SIZE * GRID_SIZE), 
+            self.positions = [((SCREEN_WIDTH // 2 // GRID_SIZE * GRID_SIZE),
                                (SCREEN_HEIGHT // 2 // GRID_SIZE * GRID_SIZE))]
 
 
